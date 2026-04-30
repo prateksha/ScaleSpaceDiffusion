@@ -1,10 +1,37 @@
-# Scale Space Diffusion
+<h2 align="center">Scale Space Diffusion</h2>
 
-This is the codebase for [Scale Space Diffusion](https://arxiv.org/abs/2603.08709) (Accepted at CVPR 2026).
+<p align="center">
+  <a href="https://soumik-kanad.github.io/">Soumik Mukhopadhyay</a><sup>*</sup>,&nbsp;
+  <a href="https://prateksha.github.io/">Prateksha Udhayanan</a><sup>*</sup>,&nbsp;
+  <a href="https://abhinavsh.info/">Abhinav Shrivastava</a>&nbsp;
+</p>
+<p align="center">
+  <sup></sup>University of Maryland, College Park &nbsp; 
+  <br>
+  <sup>*</sup>Equal contribution.
+</p>
 
-This repository is built on top of [openai/guided-diffusion](https://github.com/openai/guided-diffusion)
+<p align="center">
+  <a href="https://prateksha.github.io/projects/scale-space-diffusion/"><img src="https://img.shields.io/badge/%F0%9F%8C%90_‎ -Project-2ea44f" /></a>
+  &nbsp;
+  <a href="https://arxiv.org/abs/2603.08709"><img src="https://img.shields.io/badge/%F0%9F%93%84_‎ -arXiv-b31b1b.svg" /></a>
+  &nbsp;
+  <a href="https://huggingface.co/prateksha-u/ssd"><img src="https://img.shields.io/badge/%F0%9F%A4%97_‎-Models-yellow" /></a>
+</p>
 
-# Download pre-trained models
+Official implementation for [Scale Space Diffusion](https://arxiv.org/abs/2603.08709) (Accepted at CVPR 2026), a pixel-space diffusion model that integrates scale-space theory by combining Gaussian noise with linear degradations (downsampling), and introduces Flexi-UNet for resolution-aware denoising.
+
+<table>
+  <tr>
+    <td><img src="assets/teaser.png" alt="Scale Space Diffusion teaser" width="85%%"></td>
+    <td><img src="assets/ssd_gif.gif" alt="Scale Space Diffusion sampling animation" width="100%"></td>
+  </tr>
+</table>
+
+This repository is built on top of [openai/guided-diffusion](https://github.com/openai/guided-diffusion).
+
+
+## Download pre-trained models
 
 We have released checkpoints for the main models in the paper. 
 
@@ -25,7 +52,7 @@ CelebA-256
 ImageNet-64
  * SSD (Flexi-UNet, 2L, 1M checkpoint): [ssd_64res_imagenet_2levels_ema_0.9999_1000000.pt](https://huggingface.co/prateksha-u/ssd/resolve/main/ssd_64res_imagenet_2levels_ema_0.9999_1000000.pt)
 
-# Setting up the environment
+## Setting up the environment
 
 Clone this repository and run the following commands to setup the codebase:
 
@@ -47,7 +74,7 @@ pip install torchinfo
 pip install hydra-core --upgrade
 ```
 
-# Sampling from pre-trained models
+## Sampling from pre-trained models
 
 Use `bash_scripts/sample_from_pretrained_model.sh` to run inference from a downloaded checkpoint. Download one of the pretrained model files above, then edit the script to point to that checkpoint and choose where outputs should be written.
 
@@ -73,7 +100,7 @@ bash bash_scripts/sample_from_pretrained_model.sh
 
 The script writes samples under `${RUN_ROOT}/${EXPERIMENT_NAME}/inferencing/`.
 
-# Training models
+## Training models
 
 Use `bash_scripts/train_ssd.sh` to train your own SSD model. Set `DATA_DIR` to the directory containing all images, and set `DATASET_SPLIT_FILE` to a text file containing the filenames of the images to use for training.
 

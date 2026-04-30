@@ -716,7 +716,7 @@ class ScaleSpaceDiffusion:
 
 
     def compute_loss(self, pred, target, terms):
-        # claculating mse_raw separately otherwise it gets overwritten
+        # calculating mse_raw separately otherwise it gets overwritten
         terms["mse_raw"] = mean_flat((target - pred) ** 2)
         # terms[mse] will contain sum of all losses
         terms["mse"] = mean_flat((target - pred) ** 2)
