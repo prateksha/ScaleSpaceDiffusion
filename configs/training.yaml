@@ -1,0 +1,12 @@
+# @package training
+batch_size: 32
+lr: 1e-4
+save_interval: 10000
+log_interval: 10
+dump_visualization_interval: 500
+microbatch: -1
+ema_rate: "0.9999"
+weight_decay: 0.0
+lr_anneal_steps: 0
+use_fp16: false
+fp16_scale_growth: 1e-3

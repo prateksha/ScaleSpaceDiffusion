@@ -1,0 +1,8 @@
+# @package ssd
+ssd_config_flag: true
+resolution_schedule: "ConvexDecay_0.5"
+t_res_sampling_mode: "one_res_many_t_except_one_t_for_res_change"
+multires_training_mode: "flexi_unet"
+num_levels: 4
+ds_factor: 2.0
+resize_operator: "BilinearOp"

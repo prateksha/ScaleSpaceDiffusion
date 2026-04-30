@@ -1,0 +1,4 @@
+# @package dataset
+name: "celeba"
+dataset_split_file: ""
+data_dir: ""

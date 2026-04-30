@@ -1,0 +1,25 @@
+# This is the master config
+defaults:
+  - _self_
+  - model
+  - training
+  - dataset
+  - ssd
+  - diffusion
+  - inference
+
+# experiment-level info
+experiment:
+  name: ???
+  experiment_type: ???   # one of: ddpm, ssd
+  root_dir: ???
+  models_dir: ???
+  num_workers: 4
+  resume_checkpoint: null
+  schedule_sampler: uniform
+
+# Hydra run config
+hydra:
+  run:
+    dir: ${experiment.root_dir}     # keep working dir same (important for DDP)
+  output_subdir: hydra_config      # do not create subfolders under Hydra
