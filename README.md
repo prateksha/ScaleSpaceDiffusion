@@ -136,10 +136,12 @@ By default, model checkpoints are dumped every 10K iterations. To change this, a
 
 ## Citation
 ```
-@article{mukhopadhyay2026scale,
-  title={Scale Space Diffusion},
-  author={Mukhopadhyay, Soumik and Udhayanan, Prateksha and Shrivastava, Abhinav},
-  journal={arXiv preprint arXiv:2603.08709},
-  year={2026}
+@InProceedings{Mukhopadhyay_2026_CVPR,
+    author    = {Mukhopadhyay, Soumik and Udhayanan, Prateksha and Shrivastava, Abhinav},
+    title     = {Scale Space Diffusion},
+    booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+    month     = {June},
+    year      = {2026},
+    pages     = {35851-35860}
 }
 ```
