@@ -154,9 +154,8 @@ class TrainLoop:
 
     def _load_optimizer_state(self):
         main_checkpoint = find_resume_checkpoint(self.models_dir) or self.resume_checkpoint
-        opt_checkpoint = bf.join(
-            bf.dirname(main_checkpoint), f"opt_{main_checkpoint.split('_')[-1]}"
-        )
+        model_suffix = os.path.basename(main_checkpoint)[len("model_") :]
+        opt_checkpoint = bf.join(bf.dirname(main_checkpoint), f"opt_{model_suffix}")
         if bf.exists(opt_checkpoint):
             logger.log(f"[_load_optimizer_state] loading optimizer state from checkpoint: {opt_checkpoint}")
             state_dict = dist_util.load_state_dict(
@@ -360,7 +359,8 @@ def find_resume_checkpoint(models_dir):
 def find_ema_checkpoint(main_checkpoint, step, rate):
     if main_checkpoint is None:
         return None
-    filename = f"ema_{rate}_{main_checkpoint.split('_')[-1]}"
+    model_suffix = os.path.basename(main_checkpoint)[len("model_") :]
+    filename = f"ema_{rate}_{model_suffix}"
     path = bf.join(bf.dirname(main_checkpoint), filename)
     if bf.exists(path):
         return path

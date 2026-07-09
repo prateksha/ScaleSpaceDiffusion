@@ -544,7 +544,6 @@ class GaussianDiffusion:
             model_kwargs=model_kwargs,
             device=device,
             progress=progress,
-            backtracking=backtracking
         ):
             final = sample
         return final["sample"]
@@ -560,7 +559,6 @@ class GaussianDiffusion:
         model_kwargs=None,
         device=None,
         progress=False,
-        backtracking=False #True
     ):
         """
         Generate samples from the model and yield intermediate samples from
