@@ -12,14 +12,20 @@
 </p>
 
 <p align="center">
-  <a href="https://prateksha.github.io/projects/scale-space-diffusion/"><img src="https://img.shields.io/badge/%F0%9F%8C%90_‎ -Project-2ea44f" /></a>
+  <a href="https://prateksha.github.io/projects/scale-space-diffusion/">
+    <img src="https://img.shields.io/badge/%F0%9F%8C%90_‎-Project-2ea44f" />
+  </a>
   &nbsp;
-  <a href="https://openaccess.thecvf.com/content/CVPR2026/papers/Mukhopadhyay_Scale_Space_Diffusion_CVPR_2026_paper.pdf"><img src="https://img.shields.io/badge/%F0%9F%93%84_‎ -CVPR 2026-b31b1b.svg" /></a>
+  <a href="https://openaccess.thecvf.com/content/CVPR2026/papers/Mukhopadhyay_Scale_Space_Diffusion_CVPR_2026_paper.pdf">
+    <img src="https://img.shields.io/badge/%F0%9F%93%84_‎-CVPR%202026-b31b1b.svg" />
+  </a>
   &nbsp;
-  <a href="https://huggingface.co/prateksha-u/ssd"><img src="https://img.shields.io/badge/%F0%9F%A4%97_‎-Models-yellow" /></a>
+  <a href="https://huggingface.co/prateksha-u/ssd">
+    <img src="https://img.shields.io/badge/%F0%9F%A4%97_‎-Models-yellow" />
+  </a>
 </p>
-https://openaccess.thecvf.com/content/CVPR2026/papers/Mukhopadhyay_Scale_Space_Diffusion_CVPR_2026_paper.pdf
-Official implementation for [Scale Space Diffusion]() (Accepted at CVPR 2026), a pixel-space diffusion model that integrates scale-space theory by combining Gaussian noise with linear degradations (downsampling), and introduces Flexi-UNet for resolution-aware denoising.
+
+Official implementation of [**Scale Space Diffusion**](https://prateksha.github.io/projects/scale-space-diffusion/) (CVPR 2026), a pixel-space diffusion model that integrates scale-space theory by combining Gaussian noise with linear degradations (downsampling), and introduces **Flexi-UNet** for resolution-aware denoising.
 
 <table>
   <tr>
